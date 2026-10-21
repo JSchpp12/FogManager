@@ -1,0 +1,12 @@
+# Official VfxDB toolkit lands here at fetch time (bootstrap + fetched siblings).
+tools/*
+!tools/.gitkeep
+
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.venv/
+.pytest_cache/
+.vfxdb/

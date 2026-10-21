@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fogmanager"
+version = "0.1.0"
+description = "Manager and stable Python API for volumetric (OpenVDB) datasets, starting with VfxDB"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "jschaupp" }]
+dependencies = [
+    "huggingface_hub[cli]>=0.36.0",
+    "platformdirs",
+    "rich",
+    "zstandard",
+]
+
+[project.scripts]
+fogmgr = "fogmanager.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["fogmanager"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["/fogmanager", "/tests"]

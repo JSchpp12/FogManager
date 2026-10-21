@@ -1,0 +1,1 @@
+"""FogManager test suite (stdlib unittest)."""
